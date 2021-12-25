@@ -4,23 +4,20 @@ const env = import.meta.env.MODE || 'prod'
 const EnvConfig = {
   dev: {
     baseApi: '/api',
-    mockApi:
-      'https://www.fastmock.site/mock/c1c302e8baed9894c48c17e4738c092e/api',
+    mockApi: 'http://rap2api.taobao.org/app/mock/296258/api',
   },
   test: {
     baseApi: '',
-    mockApi:
-      'https://www.fastmock.site/mock/c1c302e8baed9894c48c17e4738c092e/api',
+    mockApi: 'http://rap2api.taobao.org/app/mock/296258/api',
   },
   prod: {
     baseApi: '',
-    mockApi:
-      'https://www.fastmock.site/mock/c1c302e8baed9894c48c17e4738c092e/api',
+    mockApi: 'http://rap2api.taobao.org/app/mock/296258/api',
   },
 }
 export default {
   env,
-  mock: true,
+  mock: false,
   namespace: 'manager',
   // 解构出对应环境下的两个 api
   ...EnvConfig[env],

@@ -9,8 +9,8 @@ export const rules = {
       trigger: 'blur'
     },
     {
-      pattern: /^[a-z0-9]{5,10}$/,
-      message: '请输入 5~10 个字母或数字',
+      pattern: /^[a-zA-Z0-9]{4,10}$/,
+      message: '请输入 4~10 个字母或数字',
       trigger: 'blur'
     }
   ],
@@ -21,7 +21,7 @@ export const rules = {
       trigger: 'blur'
     },
     {
-      pattern: /^[a-z0-9]{5,}$/,
+      pattern: /^[a-zA-Z0-9]{5,}$/,
       message: '请输入 5 位以上的字母或数字',
       trigger: 'blur'
     }

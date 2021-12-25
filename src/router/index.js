@@ -7,9 +7,9 @@ const routes = [
     component: () => import('../views/main/main.vue'),
     children: [
       {
-        path: '/xxx',
-        name: 'xxx',
-        component: () => import('../views/main/system/xxx.vue'),
+        path: '/main/system/welcome',
+        name: 'welcome',
+        component: () => import('../views/main/system/welcome.vue'),
       }
     ]
   },

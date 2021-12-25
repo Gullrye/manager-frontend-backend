@@ -1,5 +1,5 @@
 import axios from 'axios'
-import { ElMessage } from 'element-plus'
+// import { ElMessage } from 'element-plus' // 不需要手动导入
 import config from '../config'
 import router from '../router'
 import storage from './storage'
@@ -13,8 +13,9 @@ const service = axios.create({
 })
 
 service.interceptors.request.use((config) => {
-  const { token } = storage.getItem('userInfo')
-  config.headers.Authorization = 'Bearer ' + Token
+  // const { token } = storage.getItem('userInfo')
+  const token = 'xxx'
+  config.headers.Authorization = 'Bearer ' + token
   return config
 })
 

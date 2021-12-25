@@ -4,21 +4,22 @@
       <h1 class="title">后台管理系统</h1>
       <el-form
         ref="ruleForm"
-        :model="ruleForm"
+        :model="account"
         status-icon
         :rules="rules"
         label-width="80px"
       >
         <el-form-item label="账号" prop="name">
-          <el-input v-model="ruleForm.name"></el-input>
+          <el-input v-model="account.name"></el-input>
         </el-form-item>
         <el-form-item label="登录密码" prop="password">
           <el-input
-            v-model="ruleForm.password"
+            v-model="account.password"
             type="password"
             autocomplete="off"
           ></el-input>
         </el-form-item>
+        <!-- 操作按钮 -->
         <el-form-item>
           <el-button type="primary" @click="submitForm('ruleForm')"
             >立即登录</el-button
@@ -36,7 +37,7 @@ export default {
   data() {
     return {
       rules,
-      ruleForm: {
+      account: {
         name: '',
         password: '',
       },
@@ -44,9 +45,13 @@ export default {
   },
   methods: {
     submitForm(formName) {
-      this.$refs[formName].validate((valid) => {
+      this.$refs[formName].validate(async (valid) => {
         if (valid) {
-          alert('submit!')
+          const xxx = await this.$api.login(this.account).then((res) => {
+            console.log(res)
+            this.$store.commit('saveUserInfo', res)
+            this.$router.push('/main/system/welcome')
+          })
         } else {
           console.log('error submit!!')
           return false
@@ -58,7 +63,7 @@ export default {
     },
   },
   mounted() {
-    console.log(this.rules)
+    // console.log(this.rules)
   },
 }
 </script>

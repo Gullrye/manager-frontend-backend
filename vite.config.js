@@ -19,6 +19,11 @@ export default defineConfig({
   server: {
     host: 'localhost',
     port: 9011,
+    proxy: {
+      '/api': {
+        target: 'http://localhost:3000',
+      },
+    },
   },
   // 设置别名
   resolve: {

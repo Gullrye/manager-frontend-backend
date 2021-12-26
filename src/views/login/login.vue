@@ -47,10 +47,10 @@ export default {
     submitForm(formName) {
       this.$refs[formName].validate(async (valid) => {
         if (valid) {
-          const xxx = await this.$api.login(this.account).then((res) => {
+          await this.$api.login(this.account).then((res) => {
             console.log(res)
             this.$store.commit('saveUserInfo', res)
-            this.$router.push('/main/system/welcome')
+            this.$router.push({ path: '/main/system/welcome' })
           })
         } else {
           console.log('error submit!!')

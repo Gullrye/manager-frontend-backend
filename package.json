@@ -15,9 +15,12 @@
     "vuex": "^4.0.2"
   },
   "devDependencies": {
+    "@iconify-json/ic": "^1.0.7",
     "@vitejs/plugin-vue": "^2.0.0",
+    "@vue/compiler-sfc": "^3.2.26",
     "sass": "^1.45.0",
     "unplugin-auto-import": "^0.5.3",
+    "unplugin-icons": "^0.13.0",
     "unplugin-vue-components": "^0.17.9",
     "vite": "^2.7.2"
   }

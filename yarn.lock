@@ -2,10 +2,25 @@
 # yarn lockfile v1
 
 
+"@antfu/install-pkg@^0.1.0":
+  version "0.1.0"
+  resolved "https://registry.npmmirror.com/@antfu/install-pkg/download/@antfu/install-pkg-0.1.0.tgz#8d8c61820cbc32e5c37d82d515485ad3ee9bd052"
+  integrity sha1-jYxhggy8MuXDfYLVFUha0+6b0FI=
+  dependencies:
+    execa "^5.1.1"
+    find-up "^5.0.0"
+
 "@antfu/utils@^0.3.0":
   version "0.3.0"
   resolved "https://registry.npmmirror.com/@antfu/utils/download/@antfu/utils-0.3.0.tgz#6306c43b52a883bd8e973e3ed8dd64248418bcc4"
   integrity sha1-YwbEO1Kog72Olz4+2N1kJIQYvMQ=
+  dependencies:
+    "@types/throttle-debounce" "^2.1.0"
+
+"@antfu/utils@^0.4.0":
+  version "0.4.0"
+  resolved "https://registry.npmmirror.com/@antfu/utils/download/@antfu/utils-0.4.0.tgz#df100ed9922d7359bf6c99083765b5207086b9a7"
+  integrity sha512-gqkpvjkgFUu+s3kP+Ly33OKpo5zvVY3FDFhv5BIb98SncS3KD6DNxPfNDjwHIoyXbz1leWo1j8DtRLZ1D2Jv+Q==
   dependencies:
     "@types/throttle-debounce" "^2.1.0"
 
@@ -18,6 +33,25 @@
   version "0.2.4"
   resolved "https://registry.npmmirror.com/@element-plus/icons-vue/download/@element-plus/icons-vue-0.2.4.tgz#dadcf72f0cea53dc83b7b7db80e1418716d7b02c"
   integrity sha512-RsJNyL58rwxtsjeMy34o8txkL6UlME1stWsUlRpTac6UE9Bx9gdJvnDXbIKhOJqBLX17fBjmposdrn6VTqim2w==
+
+"@iconify-json/ic@^1.0.7":
+  version "1.0.7"
+  resolved "https://registry.npmmirror.com/@iconify-json/ic/download/@iconify-json/ic-1.0.7.tgz#788805e39980250c59ab4e22240ca8577bb89f48"
+  integrity sha512-Cz2u1h+L/aMmeyKrcYVUY0SZdntvYK4cD5XrdT+XnyESh6IwzJ9hyNaIBGL6fnz5KCL7AfmFMlBhs0bilhrwXQ==
+  dependencies:
+    "@iconify/types" "^1.0.10"
+
+"@iconify/types@^1.0.10", "@iconify/types@^1.0.12":
+  version "1.0.12"
+  resolved "https://registry.npmmirror.com/@iconify/types/download/@iconify/types-1.0.12.tgz#839f1f784b7030b94482d51996570f4dbd7d6796"
+  integrity sha512-6er6wSGF3hgc1JEZqiGpg21CTCjHBYOUwqLmb2Idzkjiw6ogalGP0ZMLVutCzah+0WB4yP+Zd2oVPN8jvJ+Ftg==
+
+"@iconify/utils@^1.0.20":
+  version "1.0.20"
+  resolved "https://registry.npmmirror.com/@iconify/utils/download/@iconify/utils-1.0.20.tgz#b265fe2288cb30666bf64b80b246b55b0b952d90"
+  integrity sha512-J5IriR8KeANs8vIEFKWzOlOvNgZHkwqkmqaIwvqtuDbBeFHtXGfM/LYMDmjtRJ0AAa7f254qw6TK7gAibYfHUA==
+  dependencies:
+    "@iconify/types" "^1.0.12"
 
 "@nodelib/fs.scandir@2.1.5":
   version "2.1.5"
@@ -81,7 +115,7 @@
     "@vue/compiler-core" "3.2.26"
     "@vue/shared" "3.2.26"
 
-"@vue/compiler-sfc@3.2.26":
+"@vue/compiler-sfc@3.2.26", "@vue/compiler-sfc@^3.2.26":
   version "3.2.26"
   resolved "https://registry.npmmirror.com/@vue/compiler-sfc/download/@vue/compiler-sfc-3.2.26.tgz#3ce76677e4aa58311655a3bea9eb1cb804d2273f"
   integrity sha512-ePpnfktV90UcLdsDQUh2JdiTuhV0Skv2iYXxfNMOK/F3Q+2BO0AulcVcfoksOpTJGmhhfosWfMyEaEf0UaWpIw==
@@ -245,6 +279,15 @@ concat-map@0.0.1:
   resolved "https://registry.npmmirror.com/concat-map/download/concat-map-0.0.1.tgz#d8a96bd77fd68df7793a73036a3ba0d5405d477b"
   integrity sha1-2Klr13/Wjfd5OnMDajug1UBdR3s=
 
+cross-spawn@^7.0.3:
+  version "7.0.3"
+  resolved "https://registry.npmmirror.com/cross-spawn/download/cross-spawn-7.0.3.tgz#f73a85b9d5d41d045551c177e2882d4ac85728a6"
+  integrity sha1-9zqFudXUHQRVUcF34ogtSshXKKY=
+  dependencies:
+    path-key "^3.1.0"
+    shebang-command "^2.0.0"
+    which "^2.0.1"
+
 csstype@^2.6.8:
   version "2.6.19"
   resolved "https://registry.npmmirror.com/csstype/download/csstype-2.6.19.tgz?cache=0&sync_timestamp=1637224808721&other_urls=https%3A%2F%2Fregistry.npmmirror.com%2Fcsstype%2Fdownload%2Fcsstype-2.6.19.tgz#feeb5aae89020bb389e1f63669a5ed490e391caa"
@@ -255,7 +298,7 @@ dayjs@^1.10.7:
   resolved "https://registry.npmmirror.com/dayjs/download/dayjs-1.10.7.tgz?cache=0&sync_timestamp=1632754559701&other_urls=https%3A%2F%2Fregistry.npmmirror.com%2Fdayjs%2Fdownload%2Fdayjs-1.10.7.tgz#2cf5f91add28116748440866a0a1d26f3a6ce468"
   integrity sha1-LPX5Gt0oEWdIRAhmoKHSbzps5Gg=
 
-debug@^4.3.2:
+debug@^4.3.2, debug@^4.3.3:
   version "4.3.3"
   resolved "https://registry.npmmirror.com/debug/download/debug-4.3.3.tgz#04266e0b70a98d4462e6e288e38259213332b664"
   integrity sha512-/zxw5+vh1Tfv+4Qn7a5nsbcJKPaSvCDhojn6FEl9vupwK2VCSDtEiEtqr8DFtzYFOdz63LBkxec7DYuc2jon6Q==
@@ -389,6 +432,21 @@ estree-walker@^2.0.1, estree-walker@^2.0.2:
   resolved "https://registry.npmmirror.com/estree-walker/download/estree-walker-2.0.2.tgz#52f010178c2a4c117a7757cfe942adb7d2da4cac"
   integrity sha1-UvAQF4wqTBF6d1fP6UKtt9LaTKw=
 
+execa@^5.1.1:
+  version "5.1.1"
+  resolved "https://registry.npmmirror.com/execa/download/execa-5.1.1.tgz?cache=0&sync_timestamp=1637146653723&other_urls=https%3A%2F%2Fregistry.npmmirror.com%2Fexeca%2Fdownload%2Fexeca-5.1.1.tgz#f80ad9cbf4298f7bd1d4c9555c21e93741c411dd"
+  integrity sha1-+ArZy/Qpj3vR1MlVXCHpN0HEEd0=
+  dependencies:
+    cross-spawn "^7.0.3"
+    get-stream "^6.0.0"
+    human-signals "^2.1.0"
+    is-stream "^2.0.0"
+    merge-stream "^2.0.0"
+    npm-run-path "^4.0.1"
+    onetime "^5.1.2"
+    signal-exit "^3.0.3"
+    strip-final-newline "^2.0.0"
+
 fast-glob@^3.2.7:
   version "3.2.7"
   resolved "https://registry.npmmirror.com/fast-glob/download/fast-glob-3.2.7.tgz#fd6cb7a2d7e9aa7a7846111e85a196d6b2f766a1"
@@ -414,6 +472,14 @@ fill-range@^7.0.1:
   dependencies:
     to-regex-range "^5.0.1"
 
+find-up@^5.0.0:
+  version "5.0.0"
+  resolved "https://registry.npmmirror.com/find-up/download/find-up-5.0.0.tgz?cache=0&sync_timestamp=1633618659233&other_urls=https%3A%2F%2Fregistry.npmmirror.com%2Ffind-up%2Fdownload%2Ffind-up-5.0.0.tgz#4c92819ecb7083561e4f4a240a86be5198f536fc"
+  integrity sha1-TJKBnstwg1YeT0okCoa+UZj1Nvw=
+  dependencies:
+    locate-path "^6.0.0"
+    path-exists "^4.0.0"
+
 follow-redirects@^1.14.4:
   version "1.14.6"
   resolved "https://registry.npmmirror.com/follow-redirects/download/follow-redirects-1.14.6.tgz#8cfb281bbc035b3c067d6cd975b0f6ade6e855cd"
@@ -429,6 +495,11 @@ function-bind@^1.1.1:
   resolved "https://registry.npmmirror.com/function-bind/download/function-bind-1.1.1.tgz#a56899d3ea3c9bab874bb9773b7c5ede92f4895d"
   integrity sha1-pWiZ0+o8m6uHS7l3O3xe3pL0iV0=
 
+get-stream@^6.0.0:
+  version "6.0.1"
+  resolved "https://registry.npmmirror.com/get-stream/download/get-stream-6.0.1.tgz#a262d8eef67aced57c2852ad6167526a43cbf7b7"
+  integrity sha1-omLY7vZ6ztV8KFKtYWdSakPL97c=
+
 glob-parent@^5.1.2, glob-parent@~5.1.2:
   version "5.1.2"
   resolved "https://registry.npmmirror.com/glob-parent/download/glob-parent-5.1.2.tgz#869832c58034fe68a4093c17dc15e8340d8401c4"
@@ -442,6 +513,11 @@ has@^1.0.3:
   integrity sha1-ci18v8H2qoJB8W3YFOAR4fQeh5Y=
   dependencies:
     function-bind "^1.1.1"
+
+human-signals@^2.1.0:
+  version "2.1.0"
+  resolved "https://registry.npmmirror.com/human-signals/download/human-signals-2.1.0.tgz#dc91fcba42e4d06e4abaed33b3e7a3c02f514ea0"
+  integrity sha1-3JH8ukLk0G5Kuu0zs+ejwC9RTqA=
 
 immutable@^4.0.0:
   version "4.0.0"
@@ -486,12 +562,34 @@ is-number@^7.0.0:
   resolved "https://registry.npmmirror.com/is-number/download/is-number-7.0.0.tgz#7535345b896734d5f80c4d06c50955527a14f12b"
   integrity sha1-dTU0W4lnNNX4DE0GxQlVUnoU8Ss=
 
+is-stream@^2.0.0:
+  version "2.0.1"
+  resolved "https://registry.npmmirror.com/is-stream/download/is-stream-2.0.1.tgz#fac1e3d53b97ad5a9d0ae9cef2389f5810a5c077"
+  integrity sha1-+sHj1TuXrVqdCunO8jifWBClwHc=
+
+isexe@^2.0.0:
+  version "2.0.0"
+  resolved "https://registry.npmmirror.com/isexe/download/isexe-2.0.0.tgz#e8fbf374dc556ff8947a10dcb0572d633f2cfa10"
+  integrity sha1-6PvzdNxVb/iUehDcsFctYz8s+hA=
+
+kolorist@^1.5.1:
+  version "1.5.1"
+  resolved "https://registry.npmmirror.com/kolorist/download/kolorist-1.5.1.tgz#c3d66dc4fabde4f6b7faa6efda84c00491f9e52b"
+  integrity sha512-lxpCM3HTvquGxKGzHeknB/sUjuVoUElLlfYnXZT73K8geR9jQbroGlSCFBax9/0mpGoD3kzcMLnOlGQPJJNyqQ==
+
 local-pkg@^0.4.0:
   version "0.4.0"
   resolved "https://registry.npmmirror.com/local-pkg/download/local-pkg-0.4.0.tgz#e6221171813d5a0812dd84fa80ffb1c8fcc00531"
   integrity sha1-5iIRcYE9WggS3YT6gP+xyPzABTE=
   dependencies:
     mlly "^0.2.2"
+
+locate-path@^6.0.0:
+  version "6.0.0"
+  resolved "https://registry.npmmirror.com/locate-path/download/locate-path-6.0.0.tgz#55321eb309febbc59c4801d931a72452a681d286"
+  integrity sha1-VTIeswn+u8WcSAHZMackUqaB0oY=
+  dependencies:
+    p-locate "^5.0.0"
 
 lodash@^4.17.21:
   version "4.17.21"
@@ -517,6 +615,11 @@ memoize-one@^6.0.0:
   resolved "https://registry.npmmirror.com/memoize-one/download/memoize-one-6.0.0.tgz#b2591b871ed82948aee4727dc6abceeeac8c1045"
   integrity sha1-slkbhx7YKUiu5HJ9xqvO7qyMEEU=
 
+merge-stream@^2.0.0:
+  version "2.0.0"
+  resolved "https://registry.npmmirror.com/merge-stream/download/merge-stream-2.0.0.tgz#52823629a14dd00c9770fb6ad47dc6310f2c1f60"
+  integrity sha1-UoI2KaFN0AyXcPtq1H3GMQ8sH2A=
+
 merge2@^1.3.0:
   version "1.4.1"
   resolved "https://registry.npmmirror.com/merge2/download/merge2-1.4.1.tgz#4368892f885e907455a6fd7dc55c0c9d404990ae"
@@ -529,6 +632,11 @@ micromatch@^4.0.4:
   dependencies:
     braces "^3.0.1"
     picomatch "^2.2.3"
+
+mimic-fn@^2.1.0:
+  version "2.1.0"
+  resolved "https://registry.npmmirror.com/mimic-fn/download/mimic-fn-2.1.0.tgz#7ed2c2ccccaf84d3ffcb7a69b57711fc2083401b"
+  integrity sha1-ftLCzMyvhNP/y3pptXcR/CCDQBs=
 
 minimatch@^3.0.4:
   version "3.0.4"
@@ -568,6 +676,44 @@ normalize.css@^8.0.1:
   version "8.0.1"
   resolved "https://registry.npmmirror.com/normalize.css/download/normalize.css-8.0.1.tgz#9b98a208738b9cc2634caacbc42d131c97487bf3"
   integrity sha512-qizSNPO93t1YUuUhP22btGOo3chcvDFqFaj2TRybP0DMxkHOCTYwp3n34fel4a31ORXy4m1Xq0Gyqpb5m33qIg==
+
+npm-run-path@^4.0.1:
+  version "4.0.1"
+  resolved "https://registry.npmmirror.com/npm-run-path/download/npm-run-path-4.0.1.tgz?cache=0&sync_timestamp=1633420583639&other_urls=https%3A%2F%2Fregistry.npmmirror.com%2Fnpm-run-path%2Fdownload%2Fnpm-run-path-4.0.1.tgz#b7ecd1e5ed53da8e37a55e1c2269e0b97ed748ea"
+  integrity sha1-t+zR5e1T2o43pV4cImnguX7XSOo=
+  dependencies:
+    path-key "^3.0.0"
+
+onetime@^5.1.2:
+  version "5.1.2"
+  resolved "https://registry.npmmirror.com/onetime/download/onetime-5.1.2.tgz#d0e96ebb56b07476df1dd9c4806e5237985ca45e"
+  integrity sha1-0Oluu1awdHbfHdnEgG5SN5hcpF4=
+  dependencies:
+    mimic-fn "^2.1.0"
+
+p-limit@^3.0.2:
+  version "3.1.0"
+  resolved "https://registry.npmmirror.com/p-limit/download/p-limit-3.1.0.tgz#e1daccbe78d0d1388ca18c64fea38e3e57e3706b"
+  integrity sha1-4drMvnjQ0TiMoYxk/qOOPlfjcGs=
+  dependencies:
+    yocto-queue "^0.1.0"
+
+p-locate@^5.0.0:
+  version "5.0.0"
+  resolved "https://registry.npmmirror.com/p-locate/download/p-locate-5.0.0.tgz#83c8315c6785005e3bd021839411c9e110e6d834"
+  integrity sha1-g8gxXGeFAF470CGDlBHJ4RDm2DQ=
+  dependencies:
+    p-limit "^3.0.2"
+
+path-exists@^4.0.0:
+  version "4.0.0"
+  resolved "https://registry.npmmirror.com/path-exists/download/path-exists-4.0.0.tgz#513bdbe2d3b95d7762e8c1137efa195c6c61b5b3"
+  integrity sha1-UTvb4tO5XXdi6METfvoZXGxhtbM=
+
+path-key@^3.0.0, path-key@^3.1.0:
+  version "3.1.1"
+  resolved "https://registry.npmmirror.com/path-key/download/path-key-3.1.1.tgz#581f6ade658cbba65a0d3380de7753295054f375"
+  integrity sha1-WB9q3mWMu6ZaDTOA3ndTKVBU83U=
 
 path-parse@^1.0.6:
   version "1.0.7"
@@ -648,6 +794,23 @@ semver@^7.0.0:
   dependencies:
     lru-cache "^6.0.0"
 
+shebang-command@^2.0.0:
+  version "2.0.0"
+  resolved "https://registry.npmmirror.com/shebang-command/download/shebang-command-2.0.0.tgz#ccd0af4f8835fbdc265b82461aaf0c36663f34ea"
+  integrity sha1-zNCvT4g1+9wmW4JGGq8MNmY/NOo=
+  dependencies:
+    shebang-regex "^3.0.0"
+
+shebang-regex@^3.0.0:
+  version "3.0.0"
+  resolved "https://registry.npmmirror.com/shebang-regex/download/shebang-regex-3.0.0.tgz#ae16f1644d873ecad843b0307b143362d4c42172"
+  integrity sha1-rhbxZE2HPsrYQ7AwexQzYtTEIXI=
+
+signal-exit@^3.0.3:
+  version "3.0.6"
+  resolved "https://registry.npmmirror.com/signal-exit/download/signal-exit-3.0.6.tgz#24e630c4b0f03fea446a2bd299e62b4a6ca8d0af"
+  integrity sha512-sDl4qMFpijcGw22U5w63KmD3cZJfBuFlVNbVMKje2keoKML7X2UzWbc4XrmEbDwg0NXJc3yv4/ox7b+JWb57kQ==
+
 "source-map-js@>=0.6.2 <2.0.0", source-map-js@^1.0.1:
   version "1.0.1"
   resolved "https://registry.npmmirror.com/source-map-js/download/source-map-js-1.0.1.tgz#a1741c131e3c77d048252adfa24e23b908670caf"
@@ -662,6 +825,11 @@ sourcemap-codec@^1.4.4:
   version "1.4.8"
   resolved "https://registry.npmmirror.com/sourcemap-codec/download/sourcemap-codec-1.4.8.tgz#ea804bd94857402e6992d05a38ef1ae35a9ab4c4"
   integrity sha1-6oBL2UhXQC5pktBaOO8a41qatMQ=
+
+strip-final-newline@^2.0.0:
+  version "2.0.0"
+  resolved "https://registry.npmmirror.com/strip-final-newline/download/strip-final-newline-2.0.0.tgz#89b852fb2fcbe936f6f4b3187afb0a12c1ab58ad"
+  integrity sha1-ibhS+y/L6Tb29LMYevsKEsGrWK0=
 
 to-regex-range@^5.0.1:
   version "5.0.1"
@@ -680,6 +848,19 @@ unplugin-auto-import@^0.5.3:
     local-pkg "^0.4.0"
     magic-string "^0.25.7"
     resolve "^1.20.0"
+    unplugin "^0.2.21"
+
+unplugin-icons@^0.13.0:
+  version "0.13.0"
+  resolved "https://registry.npmmirror.com/unplugin-icons/download/unplugin-icons-0.13.0.tgz#9bb2e75c61609dae86938044186288590bb990ba"
+  integrity sha512-CyAl0HV3bZUGT7ut9agpPRhEYXCvufr80Fh72yrkD57BVCTZ7ze10Rt63ZrvPXiJQpd+aI/Bizm2aqOf3WPSfg==
+  dependencies:
+    "@antfu/install-pkg" "^0.1.0"
+    "@antfu/utils" "^0.4.0"
+    "@iconify/utils" "^1.0.20"
+    debug "^4.3.3"
+    kolorist "^1.5.1"
+    local-pkg "^0.4.0"
     unplugin "^0.2.21"
 
 unplugin-vue-components@^0.17.9:
@@ -752,7 +933,19 @@ webpack-virtual-modules@^0.4.3:
   resolved "https://registry.npmmirror.com/webpack-virtual-modules/download/webpack-virtual-modules-0.4.3.tgz#cd597c6d51d5a5ecb473eea1983a58fa8a17ded9"
   integrity sha1-zVl8bVHVpey0c+6hmDpY+ooX3tk=
 
+which@^2.0.1:
+  version "2.0.2"
+  resolved "https://registry.npmmirror.com/which/download/which-2.0.2.tgz?cache=0&sync_timestamp=1632753511486&other_urls=https%3A%2F%2Fregistry.npmmirror.com%2Fwhich%2Fdownload%2Fwhich-2.0.2.tgz#7c6a8dd0a636a0327e10b59c9286eee93f3f51b1"
+  integrity sha1-fGqN0KY2oDJ+ELWckobu6T8/UbE=
+  dependencies:
+    isexe "^2.0.0"
+
 yallist@^4.0.0:
   version "4.0.0"
   resolved "https://registry.npmmirror.com/yallist/download/yallist-4.0.0.tgz#9bb92790d9c0effec63be73519e11a35019a3a72"
   integrity sha1-m7knkNnA7/7GO+c1GeEaNQGaOnI=
+
+yocto-queue@^0.1.0:
+  version "0.1.0"
+  resolved "https://registry.npmmirror.com/yocto-queue/download/yocto-queue-0.1.0.tgz#0294eb3dee05028d31ee1a5fa2c556a6aaf10a1b"
+  integrity sha1-ApTrPe4FAo0x7hpfosVWpqrxChs=

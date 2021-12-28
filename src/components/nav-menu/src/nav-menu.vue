@@ -4,31 +4,39 @@
       <span v-if="!collapse"> Vue3 + Koa2 </span>
     </div>
     <el-menu
-      default-active="2"
+      default-active="/system/user"
       class="el-menu-vertical-demo"
       :collapse="collapse"
     >
-      <el-sub-menu index="1">
-        <template #title>
-          <i-ic-outline-settings />
-          <span>Navigator One</span>
-        </template>
-        <el-menu-item index="1-1">item one</el-menu-item>
-        <el-menu-item index="1-2">item two</el-menu-item>
-        <el-menu-item index="1-3">item three</el-menu-item>
-      </el-sub-menu>
-      <el-sub-menu index="4">
-        <template #title>
-          <i-ic-outline-local-post-office />
-          <span>Navigator Four</span>
-        </template>
-        <el-menu-item index="1-1">item one</el-menu-item>
-      </el-sub-menu>
+      <!-- 一级菜单 -->
+      <template v-for="(outerItem, index) in menuList" :key="outerItem._id">
+        <el-sub-menu :index="outerItem.path">
+          <template #title>
+            <i-ic-outline-settings v-if="index === 0" />
+            <i-ic-outline-local-post-office v-else />
+            <span>{{ outerItem.menuName + outerItem.path }}</span>
+          </template>
+          <!-- 二级菜单 -->
+          <template
+            v-for="innerItem in outerItem.children"
+            :key="innerItem._id"
+          >
+            <el-menu-item
+              :index="innerItem.path"
+              @click="handleMenuClick(innerItem.path)"
+            >
+              {{ innerItem.menuName + innerItem.path }}
+            </el-menu-item>
+          </template>
+        </el-sub-menu>
+      </template>
     </el-menu>
   </div>
 </template>
 
 <script>
+import { mapMenusToRoutes } from '../../../utils/map-menus'
+import router from '../../../router'
 export default {
   props: {
     collapse: {
@@ -38,18 +46,25 @@ export default {
   },
   data() {
     return {
-      menuList: []
+      menuList: [],
     }
   },
-  methods: {},
-  async mounted() {
-    this.menuList = await this.$api.getMenuList({
-      menuName: '查看',
-      // menuState: '1',
-    }).then((res) => {
-      console.log(res)
+  methods: {
+    handleMenuClick(path) {
+      router.push('/main'+path)
+    },
+  },
+  async created() {
+    this.menuList = await this.$api.getMenuList()
+    let newMenus = await mapMenusToRoutes(this.menuList)
+    console.log(newMenus)
+
+    // 将 routes => router.main.children
+    newMenus.forEach((item) => {
+      router.addRoute('main', item)
     })
   },
+  mounted() {},
 }
 </script>
 
@@ -67,6 +82,10 @@ export default {
 }
 .el-menu-vertical-demo:not(.el-menu--collapse) {
   width: 100%;
+}
+.el-sub-menu__title svg {
+  padding-right: 5px;
+  color: #666;
 }
 .el-menu.el-menu--collapse.v-enter-to {
   border: none;

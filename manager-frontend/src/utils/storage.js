@@ -20,7 +20,7 @@ export default {
   },
   // 获取命名空间内的 key
   getItem(key) {
-    return this.getStorage()[key]
+    return this.getStorage()[key] || {} // 记得给默认值 {}，不然 request.js 请求拦截处获取 token 会报错！！！
   },
   clearItem(key) {
     let storage = this.getStorage()

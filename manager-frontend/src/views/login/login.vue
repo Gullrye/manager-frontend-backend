@@ -45,11 +45,12 @@ export default {
   },
   methods: {
     submitForm(formName) {
-      this.$refs[formName].validate(async (valid) => {
+      this.$refs[formName].validate((valid) => {
         if (valid) {
-          await this.$api.login(this.account).then((res) => {
-            console.log(res)
-            this.$store.commit('saveUserInfo', res)
+          this.$api.login(this.account).then((res) => {
+            // console.log(res)
+            this.$storage.setItem('userInfo', res)
+            this.$store.commit('login/changeUserInfo', res)
             this.$router.push({ path: '/main/system/welcome' })
           })
         } else {

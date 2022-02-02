@@ -35,7 +35,6 @@
 </template>
 
 <script>
-import { mapMenusToRoutes } from '../../../utils/map-menus'
 import router from '../../../router'
 export default {
   props: {
@@ -56,15 +55,11 @@ export default {
   },
   async created() {
     this.menuList = await this.$api.getMenuList()
-    let newMenus = await mapMenusToRoutes(this.menuList)
-    console.log(newMenus)
-
-    // 将 routes => router.main.children
-    newMenus.forEach((item) => {
-      router.addRoute('main', item)
-    })
+    // console.log(this.menuList)
   },
-  mounted() {},
+  mounted() {
+    console.log(this.$route.matched)
+  },
 }
 </script>
 

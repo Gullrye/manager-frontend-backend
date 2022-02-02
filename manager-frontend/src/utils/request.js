@@ -13,9 +13,7 @@ const service = axios.create({
 })
 
 service.interceptors.request.use((config) => {
-  // const { token } = storage.getItem('userInfo')
-  const token = 'xxx'
-  storage.setItem('token', token)
+  const { token } = storage.getItem('userInfo')
   config.headers.Authorization = 'Bearer ' + token
   return config
 })

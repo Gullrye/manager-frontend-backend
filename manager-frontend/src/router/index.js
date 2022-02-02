@@ -4,12 +4,18 @@ import storage from '../utils/storage'
 const routes = [
   {
     path: '/',
+    name: 'home',
+    redirect: '/main',
+    component: () => import('../views/main/main.vue'),
+  },
+  {
+    path: '/main',
     name: 'main',
     redirect: '/main/system/welcome',
     component: () => import('../views/main/main.vue'),
     children: [
       {
-        path: '/main/system/welcome',
+        path: 'system/welcome', // children path 前面不需要加 '/'
         name: 'welcome',
         component: () => import('../views/main/system/welcome.vue'),
       },
@@ -34,8 +40,7 @@ const router = createRouter({
 
 router.beforeEach((to) => {
   if (to.path !== '/login') {
-    const token = storage.getItem('token')
-    console.log('token: ' + token)
+    const { token } = storage.getItem('userInfo')
     if (!token) {
       return '/login'
     }
